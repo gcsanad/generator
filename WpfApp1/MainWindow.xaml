@@ -1,0 +1,46 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="300">
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Background="Gray" HorizontalAlignment="Center" Height="80" Margin="0,78,0,34">
+            <Label Content="Password Generator"/>
+            <Label x:Name="lblJelszo" Content="P4$5W0rD!" HorizontalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Background="Gray" HorizontalAlignment="Center" Height="150" Width="200" Margin="0,10,0,57">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Character Length"/>
+                <Label x:Name="lblHossz" Content="0" Margin="20 0 0 0"/>
+            </StackPanel>
+            <Slider x:Name="sliHossz" Minimum="0" Maximum="20" IsSnapToTickEnabled="True" ValueChanged="sliHossz_ValueChanged"/>
+            <StackPanel Orientation="Horizontal">
+            <CheckBox x:Name="cbNagybetu" VerticalAlignment="Center"/>
+                <Label Content="Include Uppercase Letters"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox x:Name="cbKisbetu" VerticalAlignment="Center"/>
+                <Label Content="Include Lowercase Letters"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox x:Name="cbSzamok" VerticalAlignment="Center"/>
+                <Label Content="Include Numbers"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox x:Name="cbSzimbolumok" VerticalAlignment="Center"/>
+                <Label Content="Include Symbols"/>
+            </StackPanel>
+        </StackPanel>
+        <Button x:Name="btnGeneral" Background="LightGreen" Content="Generate ->" Height="30" Width="80" Grid.Row="1" Margin="110,140,110,22" Click="btnGeneral_Click" />
+
+
+
+    </Grid>
+</Window>
